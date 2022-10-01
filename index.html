@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5260/5260498.png">
+
+	<title>1 vs 1</title>
+</head>
+<body>
+ <div class="rules" id="rules">
+	<div class="header__close" id="ffff">
+		<img id="close" class="close" src="./img/close.png" alt="close">
+	</div>
+	<div class="main__close">
+		<p class="text__rules">The rules are simple enough who is the first to reach the goal and get a point who will score 5 points in that winner</p>
+	</div>
+ </div> 
+
+	 <div class="loading" id="loading">
+		<div class="header">
+			<audio id="myAudio" src="./Myusic.mp3" preload="auto">
+			</audio>
+			<a onClick="togglePlay()"><div class="music__off" id="music__off">
+				<div class="line" id="line"></div>
+			</div></a>
+		</div>
+		<div class="main">
+        <div class="button animation__button" id="button__play">
+          <a href="#">Play</a>
+        </div>
+				<div class="button animation__button" id="button__rules">
+          <a href="#">Rules</a>
+        </div>
+				<div class="button animation__button" id="quit">
+          <a href="#">Quit</a>
+        </div>
+		</div>
+	</div>
+
+	 <div class="winner__menu" id="winner__menu">
+		<div class="winner__header">
+			<p class="winner__name" id="winner__name"></p>
+		</div>
+		<div class="winner__icon">
+			<img class="winner__img" src="./img/winner.png" alt="win">
+		</div>
+		<div class="winner__main">
+			<p class="text__wineer"><span id="name__toPoint"></span > = <span id="pointplayer1">0</span> <span>point</span></p>
+			<p class="text__wineer2"><span id="name__toPoint2"></span > = <span id="pointplayer2">0</span> <span>point</span></p>
+		</div>
+		<div class="winner__footer">
+			<p class="restart" id="restart">RESTART</p>
+		</div>
+	</div> 
+
+	<div class="settings__menu" id="settings__menu">
+		<div class="settings__header">
+			<div class="settings__box">
+				<p class="settings__h1">Settings</p>
+				<img class="settings__close" id="settings__close" src="./img/close.png" alt="close">
+			</div>
+		</div>
+
+		<div class="settings__main">
+			<div class="settings__centerM">
+				<p class="settings__h2">Skins</p>
+				<div class="box__nameee">
+					<p class="textName" id="name__pl1"></p>
+					<p class="textName" id="name__pl2"></p>
+
+				</div>
+				<div class="settings__contant settings__contant-first" >
+					<div class="settings__background-icon" id="bg1__pl1">
+						<div class="bg__image1__pl bg__image" id="bg__image__pl"></div>
+					</div>
+					<div class="settings__background-icon" id="bg1__pl2">
+						<div class="bg__image2__pl bg__image" id="bg__image2__pl"></div>
+					</div>
+				</div>
+				<div class="settings__contant" >
+					<div class="settings__background-icon" id="bg2__pl1">
+						<div class="bg__image3__pl bg__image" id="bg__image3__pl"></div>
+					</div>
+					<div class="settings__background-icon" id="bg2__pl2">
+						<div class="bg__image4__pl bg__image" id="bg__image4__pl"></div>
+					</div>
+				</div>
+				<div class="settings__contant" >
+					<div class="settings__background-icon" id="bg3__pl1">
+						<div class="bg__image5__pl bg__image" id="bg__image5__pl"></div>
+					</div>
+					<div class="settings__background-icon" id="bg3__pl2__pl">
+						<div class="bg__image6__pl bg__image" id="bg__image6__pl"></div>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+
+			<div class="settings__rihgtM">
+				<p class="settings__h2">Locations</p>
+				<div class="settings__contant settings__contant-first" >
+					<div class="settings__background-icon" id="bg1">
+						<div class="bg__image1 bg__image" id="bg__image"></div>
+					</div>
+					<div class="settings__background-icon" id="bg2">
+						<div class="bg__image2 bg__image" id="bg__image2"></div>
+					</div>
+				</div>
+				<div class="settings__contant" >
+					<div class="settings__background-icon" id="bg3">
+						<div class="bg__image3 bg__image" id="bg__image3"></div>
+					</div>
+					<div class="settings__background-icon" id="bg4">
+						<div class="bg__image4 bg__image" id="bg__image4"></div>
+					</div>
+				</div>
+				<div class="settings__contant" >
+					<div class="settings__background-icon" id="bg5">
+						<div class="bg__image5 bg__image" id="bg__image5"></div>
+					</div>
+					<div class="settings__background-icon" id="bg6">
+						<div class="bg__image6 bg__image" id="bg__image6"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="wrap" id="wrap">
+	  <div class="wrap__header">
+			<div class="menu" id="menu__main"></div>
+			<div class="tabel__winner">
+				<div class="tabel tabel__p1">
+					<p class="plaeyer__name" id="paleyer__pl1"></p>
+					<p class="plaeyer__number" id="paleyernumber__pl1">0</p>
+
+				</div>
+				<div class="tabel tabel__p2">
+					<p class="plaeyer__name" id="paleyer__pl2"></p>
+					<p class="plaeyer__number" id="paleyernumber__pl2">0</p>
+				</div>
+
+			</div>
+			<div class="settings" id="setiings__main"></div>
+
+		</div>
+		<div class="wrap__main">
+			<div class="palayer1" id="palayer1"></div>
+			<div class="palayer2" id="palayer2"></div>
+
+
+			<div class="target" id="target"></div>
+		</div>
+
+
+		
+	</div>
+
+	<script src="./script/main.js"></script>
+</body>
+</html>
